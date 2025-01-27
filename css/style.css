@@ -1,0 +1,119 @@
+@font-face {
+    font-family: "Metrika";
+    src: url('../fonts/Metrika.otf') format('truetype');
+}
+  body {
+    font-family:'Metrika';
+  }
+  button:hover, a:hover{
+    cursor: grab;
+  }
+
+header{
+    width: 95%;
+    margin-left: auto;
+    margin-right:auto ;
+}
+.article1{
+    margin-top: 1%;
+    display: flex;
+    justify-content:space-around ;
+}
+.icons{
+    display: flex;
+    width: 5%;
+    flex-wrap: wrap;
+    vertical-align: 180%;
+
+}
+.icons img{
+    width:100%;
+}
+.icons a{
+    width: 40%;
+}
+.nav{
+    margin-top: 1%;
+}
+.logo{
+    height: 5vh;
+    margin-top: 0.8%;
+}
+.hr-basic{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.nav-link{
+    color: black;
+}
+.nav-link:hover{
+    color:#FFE4C4;
+}
+main h1{
+    color: #FFE4C4;
+    -webkit-text-stroke: 1px #000000; /* Толщина и цвет обводки */
+    text-stroke: 1px #000000; /* Толщина и цвет обводки (стандартное свойство) */
+}
+.p a{
+    color: black;
+    text-decoration: none;
+}
+.centered-hr {
+    width: 12%;
+    margin: auto;
+}
+.d-flex.justify-content-center p{
+    background-color: #FFE4C4;
+    font-size: 150%;
+    width: 35%;
+    text-align: center;
+}
+.vertical-hr {
+    width: 1px;
+    height: 20vh; 
+    background-color: #000; /* Цвет линии */
+    margin: auto;
+}
+.d-flex.justify-content-center h5{
+    font-size: 180%;
+    width: 30%;
+    text-align: center;
+}
+.nav-link{
+    font-size: 130%;
+}
+.footer{
+    background-color: #7F553D;
+}
+.container-fluid.form{
+    margin-left: 40%;
+}
+.footer.c{
+    margin-top: 21.5%;
+}
+.h4.a{
+    text-decoration: none;
+    cursor:grab;
+}
+.btn.btn-secondary.btn-lg{
+    background-color: #FFE4C4;
+    border: 0px;
+    transition: 0.5s;
+}
+.btn.btn-secondary.btn-lg:hover{
+    scale: 1.2;
+    background-color: #000000;
+}
+.row.mb-2{
+    width: 69.5%;
+    margin-left: 15.25%;
+}
+.a-btn{
+    color: black;
+    text-decoration: none;
+    transition: 0.5s;
+}
+.a-btn:hover{
+    color: #FFE4C4;
+}
