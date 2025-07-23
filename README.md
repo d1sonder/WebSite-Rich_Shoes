@@ -1,5 +1,5 @@
 # Rich Shoes - Интернет-магазин обуви
-
+[Открыть в Figma](https://www.figma.com/design/F4zgGY1TAQdfMXEPvVbDbJ/Untitled?node-id=0-1&t=7diMeXZCS7AnGp6V-1)
 
 ## 📋 Описание проекта
 
