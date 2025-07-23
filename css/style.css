@@ -2,118 +2,460 @@
     font-family: "Metrika";
     src: url('../fonts/Metrika.otf') format('truetype');
 }
-  body {
-    font-family:'Metrika';
-  }
-  button:hover, a:hover{
-    cursor: grab;
-  }
 
-header{
+body {
+    font-family: 'Metrika';
+    background-color: #fff;
+    color: #000;
+}
+
+button:hover, a:hover {
+    cursor: pointer;
+}
+
+header {
     width: 95%;
-    margin-left: auto;
-    margin-right:auto ;
-}
-.article1{
-    margin-top: 1%;
-    display: flex;
-    justify-content:space-around ;
-}
-.icons{
-    display: flex;
-    width: 5%;
-    flex-wrap: wrap;
-    vertical-align: 180%;
-
-}
-.icons img{
-    width:100%;
-}
-.icons a{
-    width: 40%;
-}
-.nav{
-    margin-top: 1%;
-}
-.logo{
-    height: 5vh;
-    margin-top: 0.8%;
-}
-.hr-basic{
-    width: 80%;
     margin-left: auto;
     margin-right: auto;
 }
-.nav-link{
-    color: black;
+
+.navbar-nav {
+    gap: 15px;
 }
-.nav-link:hover{
-    color:#FFE4C4;
-}
-main h1{
-    color: #FFE4C4;
-    -webkit-text-stroke: 1px #000000; /* Толщина и цвет обводки */
-    text-stroke: 1px #000000; /* Толщина и цвет обводки (стандартное свойство) */
-}
-.p a{
-    color: black;
+
+.nav-link {
+    color: #000000;
     text-decoration: none;
+    font-size: 1.1rem;
+    padding: 0.5rem 0;
+    position: relative;
+    transition: all 0.3s ease;
+    cursor: grab;
 }
+
+/* Стиль для активной ссылки (текущей страницы) */
+.nav-link.active {
+    font-weight: bold;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 5px;
+}
+
+/* Анимация при наведении на неактивные ссылки */
+.nav-link:not(.active):hover {
+    color: #FFE4C4;
+    transform: scale(1.05);
+}
+
+.nav-link:not(.active):hover {
+    color: #FFE4C4;
+    transform: scale(1.05);
+    text-shadow: 
+        -0.5px -0.5px 0 #000,
+        0.5px -0.5px 0 #000,
+        -0.5px 0.5px 0 #000,
+        0.5px 0.5px 0 #000;
+}
+
+.nav-link:not(.active):hover::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #000000; /* Изменил цвет подчеркивания на #FFE4C4 */
+    transform: scaleX(1);
+    transition: transform 0.3s ease;
+}
+
+.hr-basic {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    border-color: #000;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.social-icons a {
+    width: 30px;
+    height: 30px;
+}
+
+.social-icons img {
+    width: 100%;
+    height: auto;
+}
+
+.social-icons-large {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.social-icons-large a {
+    width: 40px;
+    height: 40px;
+}
+
+.social-icons-large img {
+    width: 100%;
+    height: auto;
+}
+
+.social-icons-footer {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.social-icons-footer a {
+    width: 30px;
+    height: 30px;
+}
+
+.social-icons-footer img {
+    width: 100%;
+    height: auto;
+}
+
+main h1 {
+    color: #FFE4C4;
+    -webkit-text-stroke: 1px #000000;
+    text-stroke: 1px #000000;
+    font-size: 2.5rem;
+}
+
 .centered-hr {
     width: 12%;
     margin: auto;
+    border-color: #000;
 }
-.d-flex.justify-content-center p{
+
+.discount-img {
+    max-width: 100%;
+    height: auto;
+}
+
+.discount-text {
     background-color: #FFE4C4;
-    font-size: 150%;
-    width: 35%;
+    font-size: 1.5rem;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 15px;
     text-align: center;
 }
-.vertical-hr {
-    width: 1px;
-    height: 20vh; 
-    background-color: #000; /* Цвет линии */
-    margin: auto;
-}
-.d-flex.justify-content-center h5{
-    font-size: 180%;
-    width: 30%;
-    text-align: center;
-}
-.nav-link{
-    font-size: 130%;
-}
-.footer{
-    background-color: #7F553D;
-}
-.container-fluid.form{
-    margin-left: 40%;
-}
-.footer.c{
-    margin-top: 21.5%;
-}
-.h4.a{
-    text-decoration: none;
-    cursor:grab;
-}
-.btn.btn-secondary.btn-lg{
-    background-color: #FFE4C4;
-    border: 0px;
-    transition: 0.5s;
-}
-.btn.btn-secondary.btn-lg:hover{
-    scale: 1.2;
-    background-color: #000000;
-}
-.row.mb-2{
-    width: 69.5%;
-    margin-left: 15.25%;
-}
-.a-btn{
+
+.discount-text a {
     color: black;
     text-decoration: none;
-    transition: 0.5s;
 }
-.a-btn:hover{
+
+.map-container {
+    margin-top: 20px;
+}
+
+.review-item {
+    background-color: #f8f9fa;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.review-text {
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.stars {
+    display: flex;
+    gap: 5px;
+}
+
+.stars img {
+    width: 25px;
+    height: 25px;
+}
+
+.footer {
+    background-color: #7F553D;
+    color: white;
+    padding: 30px 0;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer a:hover {
     color: #FFE4C4;
 }
+
+.footer p {
+    margin-bottom: 0;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%;
+}
+
+
+@media (min-width: 768px) and (max-width: 1025px) {
+    /* Настройки контейнера */
+    .navbar > .container-fluid {
+        padding: 0 15px;
+    }
+    
+    /* Логотип */
+    .navbar-brand .logo {
+        height: 40px;
+        margin-right: 10px;
+    }
+    
+    /* Основное меню */
+    .navbar-nav {
+        gap: 8px;
+        margin-top: 10px;
+    }
+    
+    .nav-link {
+        font-size: 1rem;
+        padding: 0.3rem 0.5rem;
+    }
+    
+    /* Активная ссылка */
+    .nav-link.active {
+        text-underline-offset: 3px;
+    }
+    
+    /* Блок с пользовательскими элементами */
+    .d-flex.align-items-center {
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        margin-top: 10px;
+    }
+    
+    /* Ссылки входа/регистрации */
+    .nav-link[href*="login"],
+    .nav-link[href*="register"],
+    .nav-link[href*="logout"],
+    .nav-link[href*="cart"],
+    .nav-link[href*="admin"] {
+        font-size: 0.9rem;
+        padding: 0.2rem 0.4rem;
+        margin: 0 5px;
+    }
+    
+    /* Социальные иконки */
+    .social-icons {
+        width: auto;
+        margin-top: 10px;
+        justify-content: flex-end;
+    }
+    
+    .social-icons a {
+        width: 25px;
+        margin: 0 3px;
+    }
+    
+    /* Гамбургер-меню */
+    .navbar-toggler {
+        padding: 0.25rem 0.5rem;
+        font-size: 1rem;
+    }
+}
+
+/* Дополнительные улучшения для планшетов в альбомной ориентации */
+@media (min-width: 768px) and (max-width: 1025px) and (orientation: landscape) {
+    .navbar-nav {
+        gap: 12px;
+    }
+    
+    .nav-link {
+        font-size: 1.05rem;
+    }
+    
+    .social-icons {
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar-brand .logo {
+        height: 40px;
+    }
+    
+    main h1 {
+        font-size: 1.8rem;
+    }
+    
+    .centered-hr {
+        width: 30%;
+    }
+    
+    .brands-row .col-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    
+    .footer .col-md-4 {
+        margin-bottom: 20px;
+    }
+    
+    .footer .row > div:last-child {
+        margin-bottom: 0;
+    }
+}
+.col-md-6.text-center.text-md-end a:hover{
+    color: #FFE4C4;
+}
+.form-control{
+    border: 1px solid black;
+}
+.footer.a{
+    margin-top: 15%;
+
+}
+.footer.b{
+    margin-top: 20%;
+}
+.a-btn{
+    color: white;
+    text-decoration: none;
+}
+/* Контакты */
+.contacts-page {
+    padding: 20px 0;
+}
+
+.title-divider {
+    width: 100px;
+    height: 2px;
+    background-color: #333;
+    margin: 0 auto;
+}
+
+/* Карта */
+.map-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.map-link {
+    color: #eee;
+    font-size: 12px;
+    position: absolute;
+}
+
+.map-link:nth-child(1) { top: 0; }
+.map-link:nth-child(2) { top: 14px; }
+.map-link:nth-child(3) { top: 28px; }
+
+.map-iframe {
+    width: 100%;
+    height: 400px;
+    border: none;
+    border-radius: 8px;
+}
+
+/* Блоки контактов */
+.contact-sections {
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+.contact-section {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.contact-block {
+    flex: 1;
+    min-width: 250px;
+    padding: 20px;
+    text-align: center;
+}
+
+.divider-vertical {
+    width: 1px;
+    background-color: #dee2e6;
+    margin: 0 40px;
+}
+
+/* Социальные иконки */
+.social-icons img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s;
+}
+
+.social-icons img:hover {
+    transform: scale(1.1);
+}
+
+/* Адаптивность */
+@media (max-width: 992px) {
+    .contact-section {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .divider-vertical {
+        width: 80%;
+        height: 1px;
+        margin: 20px 0;
+    }
+    
+    .contact-block {
+        margin-bottom: 20px;
+    }
+    
+    .map-iframe {
+        height: 300px;
+    }
+}
+  @media (max-width: 768px) {
+        .table-responsive {
+            border: 0;
+        }
+        .table thead {
+            display: none;
+        }
+        .table tr {
+            display: block;
+            margin-bottom: 1rem;
+            border: 1px solid #495057;
+            border-radius: 0.25rem;
+        }
+        .table td {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.5rem;
+            border-bottom: 1px solid #495057;
+        }
+        .table td:before {
+            content: attr(data-label);
+            font-weight: bold;
+            margin-right: 1rem;
+            color: #adb5bd;
+        }
+        .table td:last-child {
+            border-bottom: 0;
+        }
+    }

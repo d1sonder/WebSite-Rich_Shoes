@@ -29,64 +29,73 @@ $pot = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <link rel="shortcut icon" href="./img/logo1.png" type="image/x-icon"> 
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/sales.css">
     <title>rich shoes</title>
 </head>
 <body>
     <header>
-        <article class="article1">
-        <a href="./index.php" class="logo"><img src="./img/image 1.png"></a>
-        <ul class="nav nav-underline">
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="./index.php">Главная</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./tovar.php">Товары</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="./sales.php">Акции</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="./contacts.php">Контакты</a>
-              </li>
-              <li class="nav-item">
-              <a class="nav-link" href="./orders.php">Заказы</a>
-              </li>
-          </ul>
-          <?php if ($isLoggedIn): ?>
-                <a href="logout.php" class="nav-link" style="margin-top:1.3%">Выйти</a>
-                <a href="cart.php" class="nav-link" style="margin-top:1.3%">Корзина</a>
-                <?php if ($isAdmin): ?>
-                    <a href="admin.php" class="nav-link" style="margin-top:1.3%">Панель администратора</a>
-                <?php endif; ?>
-            <?php else: ?>
-                <a href="register.php" class="nav-link" style="margin-top:1.3%">Регистрация</a>
-                <a href="login.php" class="nav-link" style="margin-top:1.3%">Войти</a>
-            <?php endif; ?>
-                <div class="icons" href="#">
-                <a href="https://www.facebook.com/"><img src="./img/fb.png"></a>
-                <a href="https://vk.com/"><img src="./img/vk.png"></a>
-                <a href="https://www.instagram.com/"><img src="./img/inst.png"></a>
-                <a href="https://ok.ru/"><img src="./img/ok.png"></a>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./index.php">
+                    <img src="./img/image 1.png" alt="Logo" class="logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="./index.php">Главная</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./tovar.php">Товары</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="./sales.php">Акции</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./contacts.php">Контакты</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./orders.php">Заказы</a>
+                        </li>
+                    </ul>
+                    <div class="d-flex align-items-center">
+                        <?php if ($isLoggedIn): ?>
+                            <a href="cart.php" class="nav-link me-3">Корзина</a>
+                            <?php if ($isAdmin): ?>
+                                <a href="admin.php" class="nav-link me-3">Админ</a>
+                            <?php endif; ?>
+                            <a href="logout.php" class="nav-link me-3">Выйти</a>
+                        <?php else: ?>
+                            <a href="register.php" class="nav-link me-3">Регистрация</a>
+                            <a href="login.php" class="nav-link me-3">Войти</a>
+                        <?php endif; ?>
+                        <div class="social-icons">
+                            <a href="https://www.facebook.com/"><img src="./img/fb.png" alt="Facebook"></a>
+                            <a href="https://vk.com/"><img src="./img/vk.png" alt="VK"></a>
+                            <a href="https://www.instagram.com/"><img src="./img/inst.png" alt="Instagram"></a>
+                            <a href="https://ok.ru/"><img src="./img/ok.png" alt="Odnoklassniki"></a>
+                        </div>
+                    </div>
                 </div>
-          </article>
-          <hr class="hr-basic">
+            </div>
+        </nav>
+        <hr class="hr-basic">
     </header>
     <main>
 
     <br>
                   <h1 class="d-flex justify-content-center">Дисконт</h1>
-                  <div class="d-flex justify-content-center" style="height: 1vh;">
-                    <hr class="centered-hr align-self-center" />
-                </div>
                 <br>
                 <div class="container py-4">
-    <div class="p-5 mb-4 bg-body-tertiary rounded-3">
+    <div class="p-5 mb-4 bg-secondary rounded-3">
       <div class="container-fluid py-5">
         <h1 class="display-5 fw-bold">Новогодняяя распродажа!</h1>
         <p class="col-md-8 fs-4">Приглашаем вас на нашу специальную новогоднюю распродажу, где вы найдете невероятные скидки на лучшие модели обуви!  </p>
         <p class="col-md-8 fs-4">Не упустите возможность обновить свой гардероб к праздникам в Rich Shoes!</p>
         <a href="./tovar.php" class="a-btn">
-        <button class="btn btn-secondary btn-lg" type="button">Перейти к покупкам
+        <button class="btn btn-dark btn-lg" type="button">Перейти к покупкам
             </a>
       </button>
       </div>
@@ -149,32 +158,40 @@ $pot = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 
     <footer class="footer">
-  <div class="d-flex justify-content-around">
-    <div class="d-flex flex-column mb-3" style="margin-top: 5%;">
-      <h3 class="d-flex justify-content-center" >Адрес:</h3>
-      <div class="p-2" style="font-size: 150%;"><h4 class="h4">Ул. 3-я Предельная д.14, к.1</h4></div>
-      </div>
-      <div class="d-flex flex-column mb-3" style="margin-top: 5%;">
-        <h3 class="d-flex justify-content-center" >Партнёрам:</h3>
-        <div class="p-2" style="font-size: 150%;"><h4 class="h4">Партнерская информация</h4></div>
-        </div>
-        <div class="d-flex flex-column mb-3" style="margin-top: 5%;">
-          <h3 class="d-flex justify-content-center" >Наши соц. сети:</h3>
-          <div class="d-flex justify-content-center">
-                  <a href="https://www.facebook.com/"><img src="./img/fb.png"></a>
-                  <a href="https://vk.com/"><img src="./img/vk.png"></a>
-                  <a href="https://www.instagram.com/"><img src="./img/inst.png"></a>
-                  <a href="https://ok.ru/"><img src="./img/ok.png"></a></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h3 class="text-center">Адрес:</h3>
+                    <p class="text-center">Ул. 3-я Предельная д.14, к.1</p>
                 </div>
-          </div>
-  </div>
-  <br>
-  <hr class="hr-basic">
-  <div class="d-flex justify-content-around">
-    <p class="p">© Rich Shoes</p>
-    <pre class="p">Пользовательское соглашение         Политика конфиденциальности          Карта сайта</pre>
-  </div>
-</footer>
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h3 class="text-center">Партнёрам:</h3>
+                    <p class="text-center"><a href="https://assets.finuslugi.ru/mp-assets/user-agreement.pdf">Партнерская информация</a></p>
+                </div>
+                <div class="col-md-4">
+                    <h3 class="text-center">Наши соц. сети:</h3>
+                    <div class="social-icons-footer text-center">
+                        <a href="https://www.facebook.com/"><img src="./img/fb.png" alt="Facebook"></a>
+                        <a href="https://vk.com/"><img src="./img/vk.png" alt="VK"></a>
+                        <a href="https://www.instagram.com/"><img src="./img/inst.png" alt="Instagram"></a>
+                        <a href="https://ok.ru/"><img src="./img/ok.png" alt="Odnoklassniki"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <hr class="hr-basic">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p>© Rich Shoes</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <a href="https://assets.finuslugi.ru/mp-assets/user-agreement.pdf">Пользовательское соглашение &nbsp; Политика конфиденциальности &nbsp; Карта сайта</a>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <script src="./js/bootstrap.min.js"></script>
     <script src="./js/jquery-3.7.1.min.js"></script>

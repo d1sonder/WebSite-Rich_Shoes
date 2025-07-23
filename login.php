@@ -27,12 +27,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <head> 
     <meta charset="UTF-8"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <link rel="shortcut icon" href="./img/logo1.png" type="image/x-icon"> 
     <link rel="stylesheet" href="css/bootstrap.min.css"> 
     <link rel="stylesheet" href="css/style.css">  
     <title>Вход</title> 
 </head> 
 <body> 
- 
+ <main>
 <div class="container-fluid">     
     <div class="row d-flex justify-content-center">     
         <a href="index.php" class="color col-md-2 d-flex justify-content-center align-items-center">  
@@ -48,12 +49,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <form method="POST" action=""> 
                 <input type="text" class="form-control mb-3" name="login"  placeholder="Логин" required> 
                 <input type="password" class="form-control mb-3" name="password" placeholder="Пароль" required> 
-                <button type="submit" class="btn btn-purple purple">Войти</button> 
+                <button type="submit" class="btn btn-dark purple">Войти</button> 
             </form> 
+                    <p class="mb-1 fs-5 mt-5">Нет аккаунта?
+        <a href="./register.php" class="link-secondary">Зарегестрироваться</a>
+        </p>
             </div> 
         </div> 
     </div> 
- 
+ </main>
 <script src="js/jquery-3.7.1.min.js"></script>     
 <script src="js/bootstrap.min.js"></script>  
 </body> 
